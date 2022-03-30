@@ -1,0 +1,48 @@
+<div class="card-component">
+
+    <div *ngIf="thumbs.up>thumbs.down" class="card_result thumbs-up">
+        <img src="assets/img/thumbs-up.svg" alt="thumbs up" />
+    </div>
+    <div *ngIf="thumbs.up<thumbs.down"  class="card_result thumbs-down">
+        <img src="assets/img/thumbs-down.svg" alt="thumbs up" />
+    </div>
+
+    <div class="card-content">
+        <div class="info">
+            <div class="name">{{data.name}}</div>
+            <div class="descript">{{data.description}}</div>
+        </div>
+        <div class="vote">
+            <div class="date">1 month ago in {{data.category |   titlecase}} </div>
+            <div class="vote-box">
+                <div class="thumbs-up">
+                    <img src="assets/img/thumbs-up.svg" alt="thumbs up" />
+                </div>
+                <div class="thumbs-down">
+                    <img src="assets/img/thumbs-down.svg" alt="thumbs down" />
+                </div>
+                <div class="send-vote">
+                    Vote Now
+                </div>
+              
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    <div class="card-footer">
+        <div class="thumbs-up"   [ngStyle]="{'width': thumbs.up + '%'}"  >
+            <div class="image">
+                <img src="assets/img/thumbs-up.svg" alt="thumbs up" />
+            </div>
+            <div class="count"> {{thumbs.up}}% </div>
+        </div>
+        <div class="thumbs-down" [ngStyle]="{'width': thumbs.down + '%'}" > 
+            <div class="count"> {{thumbs.down}}% </div>
+            <div class="image">
+                <img src="assets/img/thumbs-down.svg" alt="thumbs down" />
+            </div>
+        </div>
+
+    </div>

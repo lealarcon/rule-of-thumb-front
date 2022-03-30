@@ -1,0 +1,97 @@
+@import './../../../../colors.sass'
+%thumbs
+  width: 45px
+  height: 45px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.card-component
+  width: 100%
+  height: 170px
+  margin: 10px 5px
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 30%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%), url('/assets/img/kayne.png')
+  background-repeat: no-repeat
+  background-size: contain
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  color: white
+
+  .card_result
+    @extend %thumbs
+    position: absolute
+    &.thumbs-up
+      background: $color-green-positive
+    &.thumbs-down
+      background: $color-yellow-negative
+  
+  .card-content
+    width: 70%
+    margin-left: 30%
+    display: flex
+    .info
+      max-width: 70%
+      .name
+        font-size: 2rem
+      .descript
+        font-size: 0.8rem
+    .vote
+      width: 30%
+      margin: 5px 10px
+      display: flex
+      flex-direction: column
+      .date
+        font-size: 0.8rem
+        text-align: end
+      .vote-box
+        display: flex
+        margin-top: 17%
+        .thumbs-up
+          @extend %thumbs
+          margin: 0px 2.5px
+          cursor: pointer
+          background: rgba($color-green-positive, 0.8)
+          &:hover
+            background-color: rgba($color-green-positive, 1)
+        .thumbs-down
+          @extend %thumbs
+          margin: 0px 2.5px
+          cursor: pointer
+          background: rgba($color-yellow-negative, 0.8)
+          &:hover
+            background-color: rgba($color-yellow-negative, 1)
+        .send-vote
+          width: 149px
+          background: rgba(48, 48, 48, 0.6)
+          border: 1px solid white
+          box-sizing: border-box
+          font-size: 0.7rem
+          text-align: center
+          display: flex
+          justify-content: center
+          align-items: center
+
+        
+
+
+
+  .card-footer
+    height: 45px
+    display: flex
+    font-size: 20px
+    .thumbs-up
+      background:  rgba($color-green-positive, 0.6)
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      .image
+        margin: 10px
+    .thumbs-down
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      background: rgba($color-yellow-negative, 0.6)
+      .image
+        margin: 10px
+
