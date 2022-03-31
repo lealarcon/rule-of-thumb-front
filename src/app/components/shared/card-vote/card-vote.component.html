@@ -1,4 +1,8 @@
-<div class="card-component">
+<div class="card-component"  [ngStyle]="{'background': 'linear-gradient(90deg, rgba(77, 44, 19, 0) 0%, rgb(0 0 0 / 0%) 80% , rgb(255 255 255 / 98%) 100%), url(/assets/img/'+data.picture+')'}">
+
+    <div class="picture" [ngStyle]="{'background': 'linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 30%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%)'}" >
+
+    </div>
 
     <div *ngIf="thumbs.up>thumbs.down" class="card_result thumbs-up">
         <img src="assets/img/thumbs-up.svg" alt="thumbs up" />
@@ -13,12 +17,12 @@
             <div class="descript">{{data.description}}</div>
         </div>
         <div class="vote">
-            <div class="date">1 month ago in {{data.category |   titlecase}} </div>
+            <div class="date">{{timeAgo}} ago in {{data.category |   titlecase}} </div>
             <div class="vote-box">
-                <div class="thumbs-up">
+                <div class="thumbs-up"  (click)="thumbSelected('up')" [ngClass]="{'selected': thumbs.selectedUp ? true : false }">
                     <img src="assets/img/thumbs-up.svg" alt="thumbs up" />
                 </div>
-                <div class="thumbs-down">
+                <div class="thumbs-down" (click)="thumbSelected('down')" [ngClass]="{'selected': thumbs.selectedDown? true : false }">
                     <img src="assets/img/thumbs-down.svg" alt="thumbs down" />
                 </div>
                 <div class="send-vote">
