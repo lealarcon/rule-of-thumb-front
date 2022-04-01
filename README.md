@@ -21,7 +21,7 @@ First, Install docker in your machine following the tutorial in https://www.dock
 
 Inside this repo you will find the Dockerfile to build the app in production environment.  if you want to re build the image you can run the `build-docker-windows.bat` file. 
 
-This dockerized app in production environment connects to a instance created in GCP which is running the back-end and persisting votes data.
+This dockerized app is configures for production environment, it connects to a instance created in GCP which is running the back-end and a mongo database to persist votes data.
 
 If you just want to run it, create a file  `docker-compose.yaml`
 
