@@ -1,5 +1,5 @@
 export class Vote {
-	public id: string;
+	public _id: string;
 	public name: string;
 	public description: string;
 	public category: string;
@@ -7,7 +7,7 @@ export class Vote {
 	public lastUpdated: string;
 	public votes: { positive: number, negative: number }
 	constructor(user?: any) {
-		this.id = user ? user.id : null;
+		this._id = user ? user.id : null;
 		this.name = user ? user.name : null;
 		this.description = user ? user.description : null;
 		this.category = user ? user.category : null;

@@ -17,23 +17,23 @@
             <div class="descript">{{data.description}}</div>
         </div>
         <div class="vote">
-            <div class="date">{{timeAgo}} ago in {{data.category |   titlecase}} </div>
+            <div class="date"  *ngIf="alreadyVoted==false" >{{timeAgo}} ago in {{data.category |   titlecase}} </div>
+            <div class="date"  *ngIf="alreadyVoted==true" >Thank you for your vote!</div>
             <div class="vote-box">
-                <div class="thumbs-up"  (click)="thumbSelected('up')" [ngClass]="{'selected': thumbs.selectedUp ? true : false }">
+                <div class="thumbs-up"  *ngIf="alreadyVoted==false" (click)="thumbSelected('up')" [ngClass]="{'selected': thumbs.selectedUp ? true : false }">
                     <img src="assets/img/thumbs-up.svg" alt="thumbs up" />
                 </div>
-                <div class="thumbs-down" (click)="thumbSelected('down')" [ngClass]="{'selected': thumbs.selectedDown? true : false }">
+                <div class="thumbs-down" *ngIf="alreadyVoted==false" (click)="thumbSelected('down')" [ngClass]="{'selected': thumbs.selectedDown? true : false }">
                     <img src="assets/img/thumbs-down.svg" alt="thumbs down" />
                 </div>
-                <div class="send-vote">
+                <div class="send-vote" *ngIf="alreadyVoted==false" (click)="sendVote(data._id)" [ngClass]="{'activated': thumbs.selectedUp || thumbs.selectedDown ? true : false }">
                     Vote Now
                 </div>
-              
+                <div class="send-vote" *ngIf="alreadyVoted==true" (click)="voteAgain()" [ngClass]="{'activated': thumbs.selectedUp || thumbs.selectedDown ? true : false }">
+                    Vote Again
+                </div>
             </div>
-            
         </div>
-        
-        
     </div>
     <div class="card-footer">
         <div class="thumbs-up"   [ngStyle]="{'width': thumbs.up + '%'}"  >

@@ -56,6 +56,7 @@
       .vote-box
         display: flex
         margin-top: 17%
+        justify-content: end
         .thumbs-up
           @extend %thumbs
           margin: 0px 2.5px
@@ -76,7 +77,8 @@
             border: 1px solid $color-white
         .send-vote
           width: 149px
-          background: rgba(48, 48, 48, 0.6)
+          height: 45px
+          background: rgba(0, 0, 0, 0.6)
           border: 1px solid white
           box-sizing: border-box
           font-size: 0.7rem
@@ -84,6 +86,10 @@
           display: flex
           justify-content: center
           align-items: center
+
+          &.activated
+            background: rgba(48, 48, 48, 0.6)
+            cursor: pointer
 
         
 

@@ -16,11 +16,16 @@ export class VoteService {
   ) { }
 
 
-  // Funciones Propias
   getVotes(): Observable<Vote[]> {
     let url: string = `/votes`;
     return this._httpService.httpGet(url);
   }
+
+  postVote(data:{voteId:string,typeVote:string}): Observable<any> {
+    let url: string = `/votes/${data.voteId}`;
+    return this._httpService.httpPost(url,JSON.stringify(data));
+  }
+  
   
 
 }
