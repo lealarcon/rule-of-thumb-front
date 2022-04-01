@@ -37,7 +37,7 @@ services:
 ```
 Then type `docker-compose up -d` , wait until the image is downloaded and container is running.
 
-Make sure both this app is running by typing `docker ps -a` 
+Make sure this app is running by typing `docker ps -a` 
 
 ```
 CONTAINER ID   IMAGE                                 COMMAND                  CREATED          STATUS                   PORTS                    NAMES
