@@ -15,7 +15,7 @@ This API app can be found in  https://github.com/lealarcon/rule-of-thumb-back
   
 
 ## Let's run it easier .... use docker!!!
-Don't you want to download the front-end and the back-end repo?? let's use docker. I have previously created some docker images to run this tutorial. 
+Don't you want to download the front-end and the back-end repo?? let's use docker. I have previously created some docker images to run this project. 
 
 First, Install docker in your machine following the tutorial in https://www.docker.com/  , if you are using a linux distribution, make sure to install docker-compose.
 
