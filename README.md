@@ -35,7 +35,7 @@ services:
     ports:
       - "8080:80"
 ```
-Then type `docker-compose up -d` , wait until the image is downloaded and container are run.
+Then type `docker-compose up -d` , wait until the image is downloaded and container is running.
 
 Make sure both this app is running by typing `docker ps -a` 
 
