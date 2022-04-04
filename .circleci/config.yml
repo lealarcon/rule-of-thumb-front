@@ -2,7 +2,7 @@ aliases:
  - &filter-only-master
    branches:
      only:
-       - master
+       - main
 
 version: 2
 jobs:
