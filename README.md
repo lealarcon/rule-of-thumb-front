@@ -21,7 +21,7 @@ First, Install docker in your machine following the tutorial in https://www.dock
 
 Inside this repo you will find the Dockerfile to build the app in production environment.  if you want to re build the image you can run the `build-docker-windows.bat` file. 
 
-This dockerized app is configures for production environment, it connects to a instance created in GCP which is running the back-end and a mongo database to persist votes data.
+This dockerized app is configured for production environment, it connects to a instance created in GCP which is running the back-end and a mongo database to persist votes data.
 
 If you just want to run it, create a file  `docker-compose.yaml`
 
@@ -44,3 +44,8 @@ CONTAINER ID   IMAGE                                 COMMAND                  CR
 799c49f8efaa   lealarcon/rule-of-thumb-front:1.0.0   "/docker-entrypoint.…"   32 minutes ago   Up 32 minutes            0.0.0.0:8080->80/tcp     rule-of-thumb-front
 ```
 Access in you browser  to http://localhost:8080
+
+
+## Don´t you want to run any app locally ? let's access to an external URL.
+
+I have previosuly created an instance in GCP with docker, this version of the app was dockerized and published in http://34.134.128.10/

@@ -2,7 +2,7 @@ version: '3'
 services:
   rule-of-thumb-front:
     container_name: rule-of-thumb-front
-    image: 'lealarcon/rule-of-thumb-front:1.0.0'
+    image: 'lealarcon/rule-of-thumb-front:2.0.0'
     restart: always
     ports:
       - "8080:80"

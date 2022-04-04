@@ -1,4 +1,4 @@
-set VERSION=1.0.0
+set VERSION=2.0.0
 set CONTAINER_HOST=docker.io
 set CONTAINER_USER=lealarcon
 set CONTAINER_NAME=rule-of-thumb-front
