@@ -19,7 +19,7 @@ jobs:
             git config --global user.email "lealarcon@users.noreply.github.com"
             git config --global user.name "lealarcon"
             echo "machine github.com login lealarcon password $GITHUB_TOKEN" > ~/.netrc
-            yarn install && GIT_USER=lealarcon &&  yarn run build
+            yarn install && GIT_USER=lealarcon &&  yarn run build --base-href /rule-of-thumb-front/
             cd dist/rule-of-thumb-front
             git init
             git add .
